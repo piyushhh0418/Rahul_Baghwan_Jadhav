@@ -1,0 +1,383 @@
+/* =========================
+   GLOBAL RESET & THEME
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #fff4e6, #ffffff);
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   BJP THEME VARIABLES
+========================= */
+:root {
+  --bjp-saffron: #ff6600;
+  --bjp-saffron-light: #ffb347;
+  --bjp-green: #1a7f37;
+  --dark: #111;
+
+  --bjp-gradient-main: linear-gradient(
+    135deg,
+    #ff6600 0%,
+    #ffb347 45%,
+    #ffffff 75%,
+    #e8f5e9 100%
+  );
+}
+
+/* =========================
+   LOTUS STRIP
+========================= */
+.lotus-strip {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.lotus-strip img {
+  width: 460px;
+  max-width: 90%;
+  filter: drop-shadow(0 12px 25px rgba(0,0,0,0.25));
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  height: 100vh;
+  background: var(--bjp-gradient-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 160px;
+}
+
+.hero-overlay {
+  text-align: center;
+}
+
+.candidate-photo {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+}
+
+.designation {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.slogan {
+  margin-top: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--bjp-saffron);
+}
+
+.hero-overlay i {
+  font-size: 32px;
+  margin: 10px 8px;
+  color: var(--bjp-green);
+}
+
+/* =========================
+   MOBILE IMAGE FIX
+========================= */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 90px;
+  }
+
+  .candidate-photo {
+    width: 80vw;
+    height: 95vw;
+    max-width: 360px;
+    max-height: 360px;
+  }
+
+  .lotus-strip img {
+    width: 240px;
+  }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  color: var(--bjp-saffron);
+  margin-bottom: 14px;
+}
+
+.vision {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* =========================
+   IMPACT
+========================= */
+.impact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.impact h3 {
+  font-size: 42px;
+  color: var(--bjp-saffron);
+  font-weight: 800;
+}
+
+/* =========================
+   WORK CARDS
+========================= */
+.work-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  flex: 1;
+  max-width: 360px;
+  min-width: 280px;
+  height: 280px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 46px rgba(0,0,0,0.4);
+}
+
+.bg-covid { background-image: url("images/covid1.jpg"); }
+.bg-health { background-image: url("images/ambulance.png"); }
+.bg-admin { background-image: url("images/admin.jpg"); }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.8));
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.work-icon {
+  font-size: 44px;
+  color: #ffd08a;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+}
+
+/* ========================= VOTER NAME CHECK SECTION ========================= */ 
+.voter-check { background: linear-gradient( 135deg, #fff4e6, #ffffff ); 
+    text-align: center; 
+    padding: 90px 12%; 
+    border-top: 4px solid var(--bjp-saffron); } 
+    .voter-check h2 { font-size: 30px; margin-bottom: 18px; } 
+    .voter-text { font-size: 18px; font-weight: 600; max-width: 800px; margin: 0 auto 10px; } 
+    .voter-subtext { font-size: 16px; color: #444; margin-bottom: 30px; } 
+    /* CTA Button */ 
+    .voter-btn { display: inline-block; background: var(--bjp-saffron);
+         color: #000; padding: 14px 34px; font-size: 18px; font-weight: 800; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; } .voter-btn:hover { background: var(--bjp-green); color: #fff; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.25); } 
+/* Mobile */ @media (max-width: 600px)
+ { .voter-check { padding: 70px 8%; } 
+ .voter-btn { width: 100%; } }
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99999;
+
+  width: 42px;
+  height: 34px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--bjp-saffron);
+  border-radius: 4px;
+}
+
+/* =========================
+   SLIDE-IN MENU
+========================= */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 260px;
+  height: 100vh;
+
+  background: linear-gradient(180deg, #ff9933, #ffffff);
+  padding: 90px 20px;
+
+  z-index: 90000;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  transition: right 0.35s ease;
+}
+
+.side-menu a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--bjp-green);
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 80000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Active states */
+.side-menu.open {
+  right: 0;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =========================
+   VALUES SECTION (RESTORED)
+========================= */
+
+.values-bg {
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/IMG_8699.JPEG") center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+}
+
+.values-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.values-bg h2 {
+  color: #ffb347;
+}
+
+.values-bg p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONNECT SECTION (ENSURE)
+========================= */
+
+.connect {
+  background: linear-gradient(180deg, #fff4e6, #ffffff);
+  text-align: center;
+}
+
+.phone {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 14px;
+  background: #1a7f37;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* =========================
+   FINAL CTA (RESTORED)
+========================= */
+
+.final-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #ff6600, #ffb347);
+  color: #ffffff;
+}
+
+.final-cta h2 {
+  color: #ffffff;
+}
+

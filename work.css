@@ -1,0 +1,128 @@
+/* =========================
+   WORK GALLERY – BJP THEME
+========================= */
+
+.work-gallery-section {
+  padding: 80px 8%;
+  background: linear-gradient(
+    135deg,
+    #ff9933 0%,
+    #ffffff 45%,
+    #ffffff 55%,
+    #1a7f37 100%
+  );
+}
+
+.work-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+  color: #ff6600;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.work-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ITEM */
+.work-item {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.3);
+}
+
+/* IMAGE */
+.work-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* TAGLINE */
+.work-caption {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #1a7f37;
+  background: #fff4e6;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+  .work-title {
+    font-size: 26px;
+  }
+
+  .work-item img {
+    height: 180px;
+  }
+
+  .work-caption {
+    font-size: 15px;
+  }
+}
+/* =========================
+   BACK TO HOME LINK
+========================= */
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  margin: 20px 0;
+  padding: 8px 14px;
+
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+
+  color: var(--bjp-saffron);
+  background: rgba(255, 102, 0, 0.08);
+
+  border-radius: 20px;
+  border: 1.5px solid var(--bjp-saffron);
+
+  transition: all 0.25s ease;
+}
+
+/* Hover / focus */
+.back:hover,
+.back:focus {
+  background: var(--bjp-saffron);
+  color: #ffffff;
+  transform: translateX(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Active click */
+.back:active {
+  transform: translateX(-2px) scale(0.98);
+}
+
+/* Optional icon polish */
+.back::before {
+  content: "←";
+  font-weight: 800;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .back {
+    font-size: 15px;
+    padding: 7px 12px;
+  }
+}
