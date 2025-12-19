@@ -2,63 +2,47 @@
 <html lang="mr">
 <head>
   <meta charset="UTF-8">
-  <title>गॅलरी</title>
-  <link rel="stylesheet" href="work.css">
+  <title>कार्याचा आढावा</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f9f9f9;
+    }
+
+    header {
+      padding: 16px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      background: #ff6600;
+      color: white;
+    }
+
+    .pdf-container {
+      height: calc(100vh - 60px);
+      width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
 
-<section class="work-gallery-section">
-  <h1 class="work-title">कोरोना काळातील सामाजिक सेवा</h1>
+<header>📄 कार्याचा आढावा (PDF)</header>
 
-  <div class="work-gallery-grid">
-
-    <div class="work-item">
-      <img src="images/c1.jpg" alt="">
-      <p class="work-caption">५१ दिवस सलग अन्नदान उपक्रम</p>
-    </div>
-
-    <div class="work-item">
-      <img src="images/covid/covid2.jpg" alt="">
-      <p class="work-caption">जीवनावश्यक वस्तूंचे वाटप</p>
-    </div>
-
-    <div class="work-item">
-      <img src="images/covid/covid3.jpg" alt="">
-      <p class="work-caption">गरजू कुटुंबांसाठी मदतकार्य</p>
-    </div>
-    <div class="work-item">
-      <img src="images/c1.jpg" alt="">
-      <p class="work-caption">५१ दिवस सलग अन्नदान उपक्रम</p>
-    </div>
-
-    <div class="work-item">
-      <img src="images/covid/covid2.jpg" alt="">
-      <p class="work-caption">जीवनावश्यक वस्तूंचे वाटप</p>
-    </div>
-
-    <div class="work-item">
-      <img src="images/covid/covid3.jpg" alt="">
-      <p class="work-caption">गरजू कुटुंबांसाठी मदतकार्य</p>
-    </div>
-    <div class="work-item">
-      <img src="images/c1.jpg" alt="">
-      <p class="work-caption">५१ दिवस सलग अन्नदान उपक्रम</p>
-    </div>
-
-    <div class="work-item">
-      <img src="images/covid/covid2.jpg" alt="">
-      <p class="work-caption">जीवनावश्यक वस्तूंचे वाटप</p>
-    </div>
-
-    <div class="work-item">
-      <img src="images/covid/covid3.jpg" alt="">
-      <p class="work-caption">गरजू कुटुंबांसाठी मदतकार्य</p>
-    </div>
-
-    <!-- Add more blocks freely -->
-
-  </div>
-</section>
+<div class="pdf-container">
+  <iframe 
+    src="Aahwal-2025.pdf#zoom=page-width"
+    loading="lazy">
+  </iframe>
+</div>
 
 <a href="javascript:history.back()" class="back">← मुख्यपृष्ठ</a>
 
